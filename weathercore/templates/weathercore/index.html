@@ -35,7 +35,7 @@
       </nav>
     <!--Navbar-->
 
-    <div id="jumbotron" class="jumbotron" style="text-align: center; margin-top: 90px; color: white;">
+    <div id="jumbotron" class="jumbotron" style="text-align: center; margin-top: 10px; color: white;">
       <h1>WEATHER</h1>
       <h6 class="txt">Check the weather condition in any city in the world.</h6>
       <img  src="{% static 'sun.ico' %}" class="image justify-content-center" style="width:100px;" alt="">
@@ -47,7 +47,7 @@
     <div class="search">
         <div container-fluid>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-sm-8">
+                <div class="col-lg-8 col-md-8 col-sm-8">
                   <form method="POST">
                   {% csrf_token%}
                     <div class="input-group  mb-3 search">
@@ -68,7 +68,7 @@
 
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-4 col-sm-4">
+        <div class="col-lg-4">
         {% if country_code and coordinate and temp and pressure and humidity %}
         <div class="card  text-white bg-primary mb-3" style="max-width: 20rem; font-size: 1rem;">
           <div class="card-header">Weather Condition</div>
